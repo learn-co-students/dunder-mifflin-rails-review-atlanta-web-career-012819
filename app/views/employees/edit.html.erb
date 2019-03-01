@@ -1,0 +1,5 @@
+<h1>Edit <%= @employee.to_s %></h1>
+<%= render 'form' %>
+<% @employee.errors.full_messages.each do |m| %>
+  <p><%= m %></p>
+<% end %>

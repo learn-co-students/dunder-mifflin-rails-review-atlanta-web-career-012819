@@ -1,0 +1,11 @@
+<h1><%= @employee.to_s %></h1>
+<% if @employee.img_url %>
+  <img src="<%= @employee.img_url %>" alt="Employee Photo">
+<% end %>
+<h3>Alias: <%= @employee.alias %></h3>
+<h3>Title: <%= @employee.title %></h3>
+<h3>Office: <%= @employee.office %></h3>
+<h3>Dog: <%= link_to @employee.dog.name, dog_path(@employee.dog) %></h3>
+<%= form_for @employee, method: :delete do |f| %>
+  <%= f.submit "Delete Employee" %>
+<% end %>
